@@ -59,15 +59,13 @@ function obtenerSaldo(clienteNombre) {
 }
 
 console.log("");
-console.log("Hola John su saldo es de: " + " "+ obtenerSaldo("John"));
+console.log(obtenerSaldo("John"));
 
 console.log("");
 
 console.log(
   "El codigo no presenta ninguna funcion, solo es un array con objetos"
 );
-console.log("");
-
 console.log(
   "The code does not present any function, it is only an array with objects"
 );
@@ -112,11 +110,8 @@ function obtenerSaldoCliente(customers) {
 const adquirirSaldo = obtenerSaldoCliente(CUSTOMERS);
 console.log("");
 console.log(adquirirSaldo("John"));
-console.log("");
 console.log(adquirirSaldo("John"));
-console.log("");
 console.log(adquirirSaldo("Jim"));
-console.log("");
 console.log(adquirirSaldo("Jim"));
 console.log("");
 // consider the following code:
@@ -128,7 +123,6 @@ console.log("");
 console.log(
   "Solucion: la variable z contiene un array con 9 posiciones, para evitar problemas  tenemos que vincular el array con el metodo y lo realizamos de la siguiente manera:"
 );
-console.log("");
 console.log(
   "Solution: the variable z contains an array with 9 positions, to avoid problems we have to link the array with the method and we do it as follows:"
 );
@@ -140,7 +134,6 @@ console.log("");
 console.log(
   "Por lo tanto el metodo Math.ceil() nos retorna un numero entero que se aproxima hacia la derecha, el metodo Math.floor() nos acerca al entero de la izquierda."
 );
-console.log("");
 console.log(
   "So the Math.ceil() method returns an integer that approaches to the right, the Math.floor() method returns an integer to the left."
 );
