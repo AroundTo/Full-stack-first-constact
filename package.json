@@ -1,0 +1,16 @@
+{
+  "name": "full-stack-first-constact",
+  "version": "1.0.0",
+  "description": "*Congrats, if you are reading this,we consider you a good candidate to be part of `Around` we hope that you will enjoy this challenge and that it will give us a better idea of your skills.*",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.2"
+  }
+}
