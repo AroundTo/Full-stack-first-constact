@@ -38,6 +38,8 @@ const sortAlternatingNumbers = (arr: number[]): number[] => {
 
   return result;
 };
+console.log('2 - sortAlternatingNumbers =>',sortAlternatingNumbers(getUniqueNumbersArray(5)));
+
 // Consider the following code:
 
 const randomValues  = [
@@ -48,7 +50,6 @@ const randomValues  = [
   [3,2],
   () => 'Hello World'
 ]
-console.log('2 - sortAlternatingNumbers =>',sortAlternatingNumbers(getUniqueNumbersArray(5)));
 //  create a function that infer parameters type, then return it ramdomly using the infered type.
 //  from the parameter type
 
@@ -93,4 +94,4 @@ function sortArray<T extends number>(arr: ReadonlyArray<T>): number[] {
 
 
 const sortedNumbers = sortArray(numbers);
-console.log('4 - sortedNumbers', sortedNumbers);
+console.log('5 - sortedNumbers', sortedNumbers);
