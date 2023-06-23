@@ -59,12 +59,21 @@ const randomValues = [
 // YOUR
 // CODE
 // HERE
-function shuffleArray<T>(array: T[]): T[]  {
+
+function shuffleArray<
+  T extends
+    | string
+    | number
+    | boolean
+    | { name: string }
+    | number[]
+    | (() => string),
+>(array: T[]): T[] {
   for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[array[i], array[j]] = [array[j], array[i]]
   }
-  return array;
+  return array
 }
 
 const randomValue = shuffleArray(randomValues)
@@ -82,17 +91,17 @@ const r = Math.ceil(Math.random() * 10) // 1 - 10
 // HERE;
 
 // Define a type for the valid index range of the array z
-type ZIndex = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10
+type ZIndex = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 
 
 // Try to assign r to a variable of type ZIndex
-const i: ZIndex = r // TypeScript error if r is not in the range 0-9
+const i: ZIndex = r // Type 'number' is not assignable to type 'ZIndex' // TypeScript error if r is not in the range 0-9
 
 // EXTRA:
 //  consider the following code:
 const numbers = [5, 2, 3, 4, 1, 6, 7, 8, 9, 10] as const
 
 //  create a function that infer the parameter and return a TYPECHECK of the elements SORTED.
-function sortArray<T extends number>(arr: ReadonlyArray<T>): number[] {
+function sortArray<T extends number>(arr: ReadonlyArray<T>): T[] {
   const sortedArray = [...arr].sort((a, b) => a - b)
   return sortedArray
 }
