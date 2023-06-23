@@ -59,21 +59,16 @@ const randomValues = [
 // YOUR
 // CODE
 // HERE
-function getRandomValue<
-  T extends
-    | string
-    | number
-    | boolean
-    | { name: string }
-    | number[]
-    | (() => string),
->(values: T[]): T {
-  const randomIndex = Math.floor(Math.random() * values.length)
-  return values[randomIndex]
+function shuffleArray<T>(array: T[]): T[]  {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
 }
 
-const randomValue = getRandomValue(randomValues)
-console.log('3 - randomValue', randomValue)
+const randomValue = shuffleArray(randomValues)
+console.log('3 - shuffleArray', randomValue)
 
 // consider the following code:
 
